@@ -6,11 +6,42 @@ body {
   width: 100%;
   text-align: center;
   padding: 100px 0px;
+  /*<weight>: Use a value from 100 to 900*/
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-weight: 350;
+  font-style: normal;
 }
 
 .title {
+  display: inline-block;
   margin-top: 20px;
   font-size: 50px;
+
+  overflow: hidden;
+    border-right: .15em solid white;
+    white-space: nowrap;
+    width: 11ch;
+}
+
+.typed span {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  animation: 
+      typing 2s steps(20, end) forwards,
+      blinking 1.2s infinite;
+}
+
+@keyframes typing {
+  from {width: 0}
+  to {width: 11ch}
+}
+
+@keyframes blinking {
+  from { border-color: transparent }
+  to { border-color: white; }
 }
 
 ul {
